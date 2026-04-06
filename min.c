@@ -1,5 +1,27 @@
 /*
 
+min — function to find the minimum value in an array of integers.
+
+Parameters:
+- arr — the array to search
+- size — number of elements in the array
+
+Include:
+- stddef.h
+- limits.h
+
+How it works:
+The function iterates through all elements of the array and finds the smallest one.
+If the array is empty (size == 0), INT_MAX is returned as a signal that there are no elements.
+
+Example:
+int arr[] = {7, 3, 5, 1, 9, 2};
+size_t size = sizeof(arr) / sizeof(arr[0]);
+
+int minimum = min(arr, size); // 1
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 min — функция поиска минимального значения в массиве целых чисел.
 
 Параметры:
