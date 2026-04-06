@@ -10,3 +10,4 @@ int min(int *arr, size_t size) {
         }
 
         return result;
+}
