@@ -1,17 +1,29 @@
 /*
+
 join — string concatenation function with memory reallocation.
+
 Parameters:
-str1 — pointer to a pointer to the first string (will be modified); may point to NULL.
-str2 — string to append to the end of str1.
-Returns:
-0 on success, -1 on error.
+- str1 — pointer to a pointer to the first string (will be modified); may point to NULL.
+- str2 — string to append to the end of str1.
+
+Return 0 on success, -1 on error.
+
 Includes:
-string.h
-stdlib.h
+- string.h
+- stdlib.h
+
 How it works:
 The function calculates the lengths of both strings and reallocates memory for *str1 to fit both. Then it copies str2 to the end of *str1 and adds the null terminator. If *str1 == NULL, the behavior is similar to strdup(str2). On realloc failure, the original pointer remains valid.
 
+Example:
+char *s = malloc(6);
+strcpy(s, "Hello");
 
+join(&s, ", World!"); // s == "Hello, World!"
+
+free(s);
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 join — функция конкатенации строк с перевыделением памяти.
 
